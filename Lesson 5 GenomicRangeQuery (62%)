@@ -11,4 +11,5 @@ def solution(S, P, Q):
                 result[i] = 2
             elif c == "A" and (result[i] > 1 or result[i] < 1):
                 result[i] = 1
+                break
     return result
