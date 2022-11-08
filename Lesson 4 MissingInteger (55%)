@@ -1,0 +1,12 @@
+def solution(A):
+    numbers = []
+    for i, c in enumerate(A):
+        if c not in numbers and c > 0:
+            numbers.append(c)
+    sort = sorted(numbers)
+    if 1 not in sort:
+        return 1
+    for x, y in enumerate(sort):
+        if y != x+1:
+            return x+1
+    return y+1
