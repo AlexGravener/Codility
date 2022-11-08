@@ -1,0 +1,11 @@
+def solution(N, A):
+    counters = [0] * N
+    for i, c in enumerate(A):
+        maximum = max(counters)
+        if c == (N + 1):
+            for a, b in enumerate(counters):
+                counters[a] = maximum
+        else:
+            counters[c-1] += 1
+        print(counters)
+    return counters
