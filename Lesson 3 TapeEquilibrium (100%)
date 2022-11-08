@@ -1,0 +1,10 @@
+def solution(A):
+    sideA = A[0]
+    sideB = sum(A[1:])
+    result = abs(sideA - sideB)
+    for x in range(1, len(A)-1):
+        sideA += A[x]
+        sideB -= A[x]
+        if abs(sideA - sideB) < result:
+            result = abs(sideA - sideB)
+    return result
