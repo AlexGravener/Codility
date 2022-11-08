@@ -1,0 +1,7 @@
+def solution(X, A):
+    fallen = set()
+    for i, c in enumerate(A):
+        fallen.add(c) 
+        if len(fallen) == X:
+            return i
+    return -1
