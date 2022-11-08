@@ -1,0 +1,8 @@
+def solution(A):
+    numbers = set()
+    for i, c in enumerate(A):
+        numbers.add(c)
+    if len(A) == max(A) and len(A) == len(numbers):
+        return 1
+    else:
+        return 0
