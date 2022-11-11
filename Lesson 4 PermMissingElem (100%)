@@ -1,0 +1,7 @@
+def solution(A):
+    sort = sorted(A)
+    for i, c in enumerate(sort):
+        if c != i+1:
+            return i+1
+    else:
+        return len(A)+1
