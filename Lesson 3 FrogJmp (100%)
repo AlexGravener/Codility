@@ -1,0 +1,6 @@
+def solution(X, Y, D):
+    calc = (Y-X) / D
+    if calc == ((Y-X) // D):
+        return int(calc)
+    else:
+        return int(calc)+1
