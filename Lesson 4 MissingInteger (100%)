@@ -1,0 +1,7 @@
+def solution(A):
+    result = 1
+    sort = sorted(set(A))
+    for c in sort:
+        if c == result:
+            result += 1
+    return result
