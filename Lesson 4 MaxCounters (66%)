@@ -1,10 +1,17 @@
 def solution(N, A):
     counters = [0] * N
-    for i, c in enumerate(A):
-        maximum = max(counters)
-        if c == (N + 1):
-            for a, b in enumerate(counters):
-                counters[a] = maximum
-        else:
+    prev_max = 0
+    current_max = 0
+    for c in A:
+        if 1 <= c <= N:
+            if prev_max > counters[c-1]:
+                counters[c-1] = prev_max
             counters[c-1] += 1
+            if current_max < counters[c-1]:
+                current_max = counters[c-1]
+        else:
+            prev_max = current_max
+    for i in range(0, N):
+        if counters[i] < prev_max:
+           counters[i] = prev_max
     return counters
