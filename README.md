@@ -11,7 +11,7 @@ Lesson 4 FrogRiverOne     100 %     Correctness 100 %     Performance 100 %
 
 Lesson 4 PermCheck        100 %     Correctness 100 %     Performance 100 %
 
-Lesson 4 MaxCounters      66  %     Correctness 100 %     Performance 40  %  
+Lesson 4 MaxCounters      66  %     Correctness 100 %     Performance 100  %  
 
 Lesoon 4 MissingInteger   55  %     Correctness 100 %     Performance 0   %
 
