@@ -1,0 +1,34 @@
+def prefix(A):
+    n = len(A)
+    P = [0] * (n+1)
+    for k in range(1,n+1):
+        P[k] = P[k-1] + A[k-1]
+    return P
+
+def solution(A):
+    P = prefix(A)
+    minimum = None
+    answer = None
+    if len(A) != 2:
+        for k in range(2,len(A)):
+            for x in range(len(A)-k+1):
+                calc = float((P[x+k] - P[x]) / k)
+                if minimum == None:
+                    minimum = calc
+                    answer = x
+                elif calc < minimum:
+                    minimum = calc
+                    answer = x
+            k += 1
+    else:
+        for k in range(2,len(A)+1):
+            for x in range(len(A)-1):
+                calc = float((P[x+k] - P[x]) / k)
+                if minimum == None:
+                    minimum = calc
+                    answer = x
+                elif calc < minimum:
+                    minimum = calc
+                    answer = x
+            k += 1
+    return answer
